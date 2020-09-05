@@ -1,0 +1,27 @@
+{
+    "name": "is-discord-invitation",
+    "version": "1.0.1",
+    "description": "Checks if a string is an official Discord invitation link",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --verbose"
+    },
+    "keywords": [
+        "discord",
+        "link",
+        "spam",
+        "invite",
+        "official",
+        "discord"
+    ],
+    "author": "tuty",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tutyamxx/is-discord-invitation"
+    },
+    "homepage": "https://github.com/tutyamxx/is-discord-invitation",
+    "devDependencies": {
+        "jest": "^26.4.2"
+    }
+}
