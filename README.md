@@ -7,7 +7,7 @@
 * NPM package that checks if a string is an official Discord invitation link
 * Useful when creating bots and you want to detect **easily** if the message sent by the user is an invitation to another Discord server.
 
-# Install [NPM](https://www.npmjs.com/package/is-discord-invite)
+# Install [NPM](https://www.npmjs.com/package/is-discord-invitation)
 
  `$ npm i is-discord-invitation`
 
