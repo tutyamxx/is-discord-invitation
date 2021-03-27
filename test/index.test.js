@@ -25,6 +25,9 @@ const RandomDiscordURL = [
 	'https://discordapp.com/api/oauth2/authorize?client_id=412067927333011470&permissions=8&scope=bot',
 	'http://discord.kekw',
 	'https://www.npmjs.com/package/is-discord-invite',
+	5,
+	true,
+	() => null,
 ];
 
 test('Check for valid Discord invites', () => {
