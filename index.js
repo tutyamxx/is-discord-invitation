@@ -5,6 +5,11 @@
  *  @license: MIT
  **/
 
+/**
+ * Test if a string is a discord invitation or not.
+ * @param {String} invite
+ * @returns {Boolean}
+ */
 module.exports = (invite) => {
 	if(!invite || invite.length <= 0 || typeof invite !== 'string') return false;
 
