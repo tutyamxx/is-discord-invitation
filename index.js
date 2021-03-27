@@ -5,17 +5,14 @@
  *  @license: MIT
  **/
 
- module.exports = (szString) =>
- {
-    if(szString.length <= 0 || !szString || typeof szString !== "string")
-    {
-        return false;
-    }
+module.exports = (szString) => {
+	if(szString.length <= 0 || !szString || typeof szString !== 'string') {
+		return false;
+	}
 
-    if(/(https?:\/\/)?(www\.)?(discord\.(gg|io|me|li)|discordapp\.com\/invite|discord.com\/invite)\/+[a-zA-Z0-9]{6,16}/gi.test(szString))
-    {
-        return true;
-    }
+	if(/(https?:\/\/)?(www\.)?(discord\.(gg|io|me|li)|discordapp\.com\/invite|discord.com\/invite)\/+[a-zA-Z0-9]{6,16}/gi.test(szString)) {
+		return true;
+	}
 
-    return false;
- };
+	return false;
+};
