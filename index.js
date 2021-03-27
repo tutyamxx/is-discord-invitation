@@ -5,14 +5,8 @@
  *  @license: MIT
  **/
 
-module.exports = (szString) => {
-	if(szString.length <= 0 || !szString || typeof szString !== 'string') {
-		return false;
-	}
+module.exports = (invite) => {
+	if(!invite || invite.length <= 0 || typeof invite !== 'string') return false;
 
-	if(/(https?:\/\/)?(www\.)?(discord\.(gg|io|me|li)|discordapp\.com\/invite|discord.com\/invite)\/+[a-zA-Z0-9]{6,16}/gi.test(szString)) {
-		return true;
-	}
-
-	return false;
+	return /(https?:\/\/)?(www\.)?(discord\.(gg|io|me|li)|discordapp\.com\/invite|discord.com\/invite)\/+[a-zA-Z0-9]{6,16}/gi.test(invite);
 };
