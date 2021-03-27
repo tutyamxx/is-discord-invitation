@@ -23,6 +23,7 @@
     },
     "homepage": "https://github.com/tutyamxx/is-discord-invitation",
     "devDependencies": {
+        "eslint": "^7.23.0",
         "jest": "^26.4.2"
     }
 }
