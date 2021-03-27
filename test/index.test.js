@@ -1,7 +1,7 @@
+/* eslint-disable no-undef */
 const isDiscordInvitation = require('../index.js');
 
-const ValidDiscordInviteURL =
-[
+const ValidDiscordInviteURL = [
 	'https://discord.gg/d8ZKqT',
 	'https://discord.gg/MTgFwr',
 	'https://discord.gg/BEXg3z',
@@ -9,10 +9,12 @@ const ValidDiscordInviteURL =
 	'https://discord.com/invite/ASGu7aC',
 	'https://discordapp.com/invite/ASGu7aC',
 	'www.discordapp.com/invite/ASGu7aC',
+	'discord.gg/d8ZKqT',
+	'discordapp.com/invite/ASGu7aC',
+	'discord.com/invite/qS2Sxgy',
 ];
 
-const RandomDiscordURL =
-[
+const RandomDiscordURL = [
 	'www.github.com',
 	'www.discord.org',
 	'www.discord.gg',
