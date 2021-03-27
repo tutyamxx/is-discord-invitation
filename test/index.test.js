@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const isDiscordInvitation = require('../index.js');
+const { isInvite, matchInvite } = require('../index.js');
 
 const ValidDiscordInviteURL = [
 	'https://discord.gg/d8ZKqT',
@@ -32,12 +32,20 @@ const RandomDiscordURL = [
 
 test('Check for valid Discord invites', () => {
 	ValidDiscordInviteURL.forEach((url) => {
-		expect(isDiscordInvitation(url)).toBe(true);
+		expect(isInvite(url)).toBe(true);
 	});
 });
 
 test('Check for random invalid Discord invite links', () => {
 	RandomDiscordURL.forEach((url) => {
-		expect(isDiscordInvitation(url)).toBe(false);
+		expect(isInvite(url)).toBe(false);
 	});
+});
+
+test('Match one or more Discord invite links in a string', () => {
+	const valid1 = ValidDiscordInviteURL[ValidDiscordInviteURL.length - 1];
+	const valid2 = ValidDiscordInviteURL[ValidDiscordInviteURL.length - 1];
+	const stringToTest = `${Math.random().toString(36).substring(7)}${valid1} ${Math.random().toString(36).substring(7)} ${valid2} ${Math.random().toString(36).substring(7)}`;
+
+	expect(matchInvite(stringToTest)).toEqual([valid1, valid2]);
 });
