@@ -13,18 +13,23 @@
 
 # Usage
 
+isInvite(string) -> boolean
 - Returns a Boolean indicating whether `string` is a  Discord invitation link
+- It will return `false` if the `string` is empty or if it isn't an invitation link
+
+matchInvite(string) -> [string]
+- Returns an array of Discord invitation links
 - It will return `false` if the `string` is empty or if it isn't an invitation link
 
 # Examples
 
-```javascript
-const isDiscordInvitation = require("is-discord-invitation");
+```js
+const { isInvite, matchInvite } = require("is-discord-invitation");
 
-if(isDiscordInvitation("https://discord.gg/J4bbax"))
-{
-    console.log("Hey, no spamming with invites please 😡");
-}
+isDiscordInvitation('https://discord.gg/J4bbax'); // true
+isDiscordInvitation('www.discord.gg/xyz'); // false
+
+matchInvite('Hey, here\'s the server invitation : https://discord.gg/J4bbax ! And here\'s another one: https://discord.com/invite/qS2Sxgy'); // ['https://discord.gg/J4bbax', 'https://discord.gg/J4bbax']
 ```
 
 <p align="center">🤖</p>

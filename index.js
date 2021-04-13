@@ -5,17 +5,24 @@
  *  @license: MIT
  **/
 
- module.exports = (szString) =>
- {
-    if(szString.length <= 0 || !szString || typeof szString !== "string")
-    {
-        return false;
-    }
+/**
+ * Test if a string is a discord invitation or not.
+ * @param {String} invite
+ * @returns {Boolean}
+ */
+module.exports.isInvite = (invite) => {
+	if(!invite || invite.length <= 0 || typeof invite !== 'string') return false;
 
-    if(/(https?:\/\/)?(www\.)?(discord\.(gg|io|me|li)|discordapp\.com\/invite|discord.com\/invite)\/+[a-zA-Z0-9]{6,16}/gi.test(szString))
-    {
-        return true;
-    }
+	return /^(https?:\/\/)?(www\.)?(discord\.(gg|io|me|li)|discordapp\.com\/invite|discord.com\/invite)\/+[a-zA-Z0-9]{6,16}$/gi.test(invite);
+};
 
-    return false;
- };
+/**
+ * Match one or more discord invitations in a string.
+ * @param {String} invite
+ * @returns {[String] | null}
+ */
+module.exports.matchInvite = (invite) => {
+	if(!invite || invite.length <= 0 || typeof invite !== 'string') throw new Error('The match function takes a string as parameter.');
+
+	return invite.match(/(https?:\/\/)?(www\.)?(discord\.(gg|io|me|li)|discordapp\.com\/invite|discord.com\/invite)\/+[a-zA-Z0-9]{6,16}/gi);
+};
