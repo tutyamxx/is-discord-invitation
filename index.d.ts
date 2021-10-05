@@ -1,1 +1,1 @@
-export default function (szString: string): boolean;
+export default function (paramString: string): boolean;

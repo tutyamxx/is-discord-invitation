@@ -1,6 +1,6 @@
 {
     "name": "is-discord-invitation",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Checks if a string is an official Discord invitation link",
     "main": "index.js",
     "types": "index.d.ts",

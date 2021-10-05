@@ -1,7 +1,6 @@
 const isDiscordInvitation = require("../index.js");
 
-const ValidDiscordInviteURL =
-[
+const validDiscordInviteUrl = [
     "https://discord.gg/d8ZKqT",
     "https://discord.gg/MTgFwr",
     "https://discord.gg/BEXg3z",
@@ -11,8 +10,7 @@ const ValidDiscordInviteURL =
     "www.discordapp.com/invite/ASGu7aC"
 ];
 
-const RandomDiscordURL =
-[
+const randomDiscordUrl = [
     "www.github.com",
     "www.discord.org",
     "www.discord.gg",
@@ -25,18 +23,14 @@ const RandomDiscordURL =
     "https://www.npmjs.com/package/is-discord-invite"
 ]
 
-test("Check for valid Discord invites", () =>
-{
-    ValidDiscordInviteURL.forEach((url) =>
-    {
+test("Check for valid Discord invites", () => {
+    validDiscordInviteUrl.forEach((url) => {
         expect(isDiscordInvitation(url)).toBe(true);
     });
 });
 
-test("Check for random invalid Discord invite links", () =>
-{
-    RandomDiscordURL.forEach((url) =>
-    {
+test("Check for random invalid Discord invite links", () => {
+    randomDiscordUrl.forEach((url) => {
         expect(isDiscordInvitation(url)).toBe(false);
     });
 });

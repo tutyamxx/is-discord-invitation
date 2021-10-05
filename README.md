@@ -21,7 +21,7 @@
 ```javascript
 const isDiscordInvitation = require("is-discord-invitation");
 
-if(isDiscordInvitation("https://discord.gg/J4bbax"))
+if (isDiscordInvitation("https://discord.gg/J4bbax"))
 {
     console.log("Hey, no spamming with invites please 😡");
 }
