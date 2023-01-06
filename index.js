@@ -1,6 +1,6 @@
 /**
  *  is-discord-invitation - Checks if a string is an official Discord invitation link
- *  @version: v1.0.8
+ *  @version: v1.0.9
  *  @link: https://github.com/tutyamxx/is-discord-invitation
  *  @license: MIT
  **/
