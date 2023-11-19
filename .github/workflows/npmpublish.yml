@@ -12,6 +12,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    # Skip Dependabot pull requests that fixes packages and vulnerabilities to trigger our CI/CD
+    if: ${{ github.actor != 'dependabot[bot]' }}
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
@@ -23,6 +27,10 @@ jobs:
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
+
+    # Skip Dependabot pull requests that fixes packages and vulnerabilities to trigger our CI/CD
+    if: ${{ github.actor != 'dependabot[bot]' }}
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
