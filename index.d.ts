@@ -1,1 +1,1 @@
-export default function (paramString: string): boolean;
+export default function (paramString: string | undefined | null): boolean;
