@@ -1,6 +1,6 @@
 {
     "name": "is-discord-invitation",
-    "version": "1.0.14",
+    "version": "1.0.15",
     "description": "Checks if a string is an official Discord invitation link",
     "main": "index.js",
     "types": "index.d.ts",
@@ -23,6 +23,6 @@
     },
     "homepage": "https://github.com/tutyamxx/is-discord-invitation",
     "devDependencies": {
-        "jest": "^29.7.0"
+        "jest": "^30.2.0"
     }
 }
