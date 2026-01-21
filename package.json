@@ -1,9 +1,15 @@
 {
     "name": "is-discord-invitation",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "description": "Checks if a string is an official Discord invitation link",
     "main": "index.js",
+    "module": "index.js",
     "types": "index.d.ts",
+    "exports": {
+        "require": "./index.js",
+        "import": "./index.js",
+        "types": "./index.d.ts"
+    },
     "scripts": {
         "test": "jest --verbose"
     },
