@@ -1,6 +1,6 @@
 {
     "name": "is-discord-invitation",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "description": "Checks if a string is an official Discord invitation link",
     "main": "index.js",
     "module": "index.js",
@@ -19,10 +19,14 @@
         "spam",
         "invite",
         "official",
-        "discord"
+        "discord",
+        "invitation",
+        "discord-url",
+        "url-discord",
+        "link"
     ],
     "author": "tuty",
-    "license": "ISC",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/tutyamxx/is-discord-invitation"

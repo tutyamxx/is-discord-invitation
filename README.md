@@ -3,6 +3,9 @@
 <p align="center">🤖</p>
 
 <p align="center"><a href="https://nodei.co/npm/is-discord-invitation/"><img src="https://nodei.co/npm/is-discord-invitation.png"></a></p>
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
+</p>
 
 * NPM package that checks if a string is an official Discord invitation link
 * Useful when creating bots and you want to detect **easily** if the message sent by the user is an invitation to another Discord server.
