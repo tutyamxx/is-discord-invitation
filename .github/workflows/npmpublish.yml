@@ -7,14 +7,16 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - '!dependabot/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     # Skip Dependabot PRs for CI/CD
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    if: github.actor != 'dependabot[bot]' && !startsWith(github.head_ref, 'dependabot/')
 
     steps:
       - uses: actions/checkout@v6
@@ -30,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # Skip Dependabot PRs
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    if: github.actor != 'dependabot[bot]' && !startsWith(github.head_ref, 'dependabot/')
 
     # Required for OIDC Trusted Publishing
     permissions:
